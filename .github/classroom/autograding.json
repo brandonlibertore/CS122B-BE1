@@ -1,0 +1,434 @@
+{
+  "tests": [
+    {
+      "name": "Environment setup",
+      "setup": "echo \"Downloading Test\"; wget https://raw.githubusercontent.com/klefstad-teaching/CS122B-BE1-IDM-Service-Starter/main/src/test/java/com/github/klefstad_teaching/cs122b/idm/IDMServiceTest.java; echo \"Moving Test\"; mv IDMServiceTest.java src/test/java/com/github/klefstad_teaching/cs122b/idm/; echo \"Starting MySQL\"; sudo systemctl start mysql.service; echo \"Creating Schema\"; mysql --user=\"root\" --password=\"root\" < db.sql; echo \"Inserting data\"; mysql --user=\"root\" --password=\"root\" < db/idm.sql",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#applicationLoads test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "registerSuccessMinPassword Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#registerSuccessMinPassword test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "registerSuccessMaxPassword Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#registerSuccessMaxPassword test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "registerSuccessMinEmail Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#registerSuccessMinEmail test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "registerSuccessMaxEmail Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#registerSuccessMaxEmail test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "registerPasswordTooShort Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#registerPasswordTooShort test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "registerPasswordTooLong Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#registerPasswordTooLong test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "registerPasswordMissingNumber Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#registerPasswordMissingNumber test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "registerPasswordMissingUpperCase Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#registerPasswordMissingUpperCase test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "registerPasswordMissingLowerCase Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#registerPasswordMissingLowerCase test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "registerEmailTooShort Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#registerEmailTooShort test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "registerEmailTooLong Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#registerEmailTooLong test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "registerEmailNotValid Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#registerEmailNotValid test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "registerAlreadyExists Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#registerAlreadyExists test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "loginSuccessMinPassword Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#loginSuccessMinPassword test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "loginSuccessMaxPassword Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#loginSuccessMaxPassword test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "loginSuccessMinEmail Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#loginSuccessMinEmail test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "loginSuccessMaxEmail Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#loginSuccessMaxEmail test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "loginPasswordTooShort Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#loginPasswordTooShort test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "loginPasswordTooLong Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#loginPasswordTooLong test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "loginPasswordMissingNumber Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#loginPasswordMissingNumber test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "loginPasswordMissingUpperCase Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#loginPasswordMissingUpperCase test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "loginPasswordMissingLowerCase Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#loginPasswordMissingLowerCase test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "loginEmailTooShort Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#loginEmailTooShort test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "loginEmailTooLong Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#loginEmailTooLong test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "loginEmailNotValid Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#loginEmailNotValid test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "loginDoesntExist Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#loginDoesntExist test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "loginBannedAccount Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#loginBannedAccount test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "loginLockedAccount Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#loginLockedAccount test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "loginWrongPassword Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#loginWrongPassword test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "refreshActiveToken Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#refreshActiveToken test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "refreshExpiredToken Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#refreshExpiredToken test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "refreshRevokedToken Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#refreshRevokedToken test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "refreshBeforeExpire Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#refreshBeforeExpire test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "refreshAfterExpire Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#refreshAfterExpire test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "refreshAfterExpireIsExtended Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#refreshAfterExpireIsExtended test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "refreshAfterMaxExpire Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#refreshAfterMaxExpire test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "refreshTokenInvalidLength Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#refreshTokenInvalidLength test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "refreshTokenInvalidFormat Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#refreshTokenInvalidFormat test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "authenticateActiveToken Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#authenticateActiveToken test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "authenticateExpiredToken Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#authenticateExpiredToken test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "authenticateInvalidTokenKey Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#authenticateInvalidTokenKey test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "authenticateInvalidClaims Test",
+      "setup": "",
+      "run": "mvn -DDB_USERNAME=root -DDB_PASSWORD=root -Dtest=IDMServiceTest#authenticateInvalidClaims test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    }
+  ]
+}
